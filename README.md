@@ -1,3 +1,3 @@
 ## Overview  
-This repository contains ansible configuration to pull a repository github
+This repository contains ansible configuration to pull a github repository 
 
