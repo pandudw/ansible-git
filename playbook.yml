@@ -1,0 +1,16 @@
+---
+- hosts: dev a
+  remote_user: root
+
+  tasks:
+  - name: update apt and upgrade all packages
+    apt:
+      upgrade: yes
+      update_cache: yes
+  
+  - name: git pull
+    git:
+      repo: (url)
+      dst: (url)
+
+      
