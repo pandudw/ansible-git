@@ -1,2 +1,3 @@
 ## Overview  
-This repository contains ansible configuration files for several raspberry pi.
+This repository contains ansible configuration to pull a repository github
+
