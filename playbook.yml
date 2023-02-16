@@ -2,10 +2,8 @@
 - hosts: dev-a
   remote_user: root
   become: yes
-  vars_files:
-    - secret.yml
-  vars:
-    - destdir: /app/example
+
+ 
 
   tasks:
   - name: update apt and upgrade all packages
@@ -13,18 +11,19 @@
       upgrade: yes
       update_cache: yes
   
-  - name: clone a repo github
+  - name: clone a github repository
     git:
       repo: https://{{gittoken}}@github.com/example.git
       dest: "{{destdir}}"
       clone: yes
       update: yes
   
-  - name: pull a repo github
+  - name: pull a github repository
     git:
       repo: (url)
       dest: "{{destdir}}"
       clone: no
       update: yes
+      version: master
 
       
